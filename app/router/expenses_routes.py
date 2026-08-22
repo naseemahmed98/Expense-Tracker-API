@@ -47,5 +47,3 @@ def delete_user(username: str, session: Session = Depends(db_setup.createSession
 @router.put("/expense_tracker/update_user/{username}")
 def update_user(username: str, value, category, session: Session = Depends(db_setup.createSession)) -> User:
     return expenses_logic.update_user(username, value, category, session)
-    
-
